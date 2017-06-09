@@ -59,12 +59,16 @@ $(".crystal").on("click", function(){
 
 //FUNCTION: Restarts Game.
 function gameReset(){
-	gameProps.init.targetPoints = Math.floor(Math.random() * (75 - 25 + 1) + 25);
+	gameProps.init.targetPoints = Math.floor(Math.random() * (120 - 19 + 1) + 19);
 	$("#targetPoints").html("Target Points: " + gameProps.init.targetPoints);
 	gameProps.init.currentPoints = 0;
 	gameProps.render.uiCurrentPoints.html("Current Points: " + gameProps.init.currentPoints);
 	gameProps.render.uiWins.html("Wins: " + gameProps.init.wins);
 	gameProps.render.uiLosses.html("Losses: " + gameProps.init.losses);
+	gameProps.crystals.c1.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+	gameProps.crystals.c2.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+	gameProps.crystals.c3.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+	gameProps.crystals.c4.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
 	getProgress();
 }
 // FUNCTION: Updates Progress Bar with each click and game restart.
