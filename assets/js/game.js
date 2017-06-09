@@ -3,7 +3,7 @@ $(document).ready(function(){
 // Create Game Properties Object.
 var gameProps = {
 	init: {
-		targetPoints:  Math.floor(Math.random() * (75 - 25 + 1) + 25), 
+		targetPoints:  Math.floor(Math.random() * (120 - 19 + 1) + 19), 
 		currentPoints: 0,
 		wins:0,
 		losses:0,
@@ -11,19 +11,19 @@ var gameProps = {
 	crystals: {
 		c1: {
 			img:$("#c1"),
-			val: Math.floor(Math.random() * (10 - 1 + 1) + 1)
+			val: Math.floor(Math.random() * (12 - 1 + 1) + 1)
 		},
 		c2: {
 			img:$("#c2"),
-			val: Math.floor(Math.random() * (10 - 1 + 1) + 1) 
+			val: Math.floor(Math.random() * (12 - 1 + 1) + 1) 
 		},
 		c3: {
 			img:$("#c3"),
-			val: Math.floor(Math.random() * (10 - 1 + 1) + 1) 
+			val: Math.floor(Math.random() * (12 - 1 + 1) + 1) 
 		},
 		c4: {
 			img:$("#c4"),
-			val: Math.floor(Math.random() * (10 - 1 + 1) + 1) 
+			val: Math.floor(Math.random() * (12 - 1 + 1) + 1) 
 		},
 	},
 	render: {
