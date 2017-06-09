@@ -1,0 +1,122 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body{
+	background: #250826;
+	color:#ffffff;
+	font-family: "Dosis", sans-serif;
+	font-size:20px;
+
+}
+
+.container{
+	width:1220px;
+	margin:60px auto;
+}
+
+.sidebar{
+	position: relative;
+	float:left;
+	width:400px;
+}
+
+.sidebar h1{
+	position: relative;
+	float:left;
+	font-size:28px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f0b8f0;
+}
+
+.sidebar ol{
+	position: relative;
+	float: left;
+	width:100%;
+	line-height: 1.4em;
+	margin-top: 40px;
+}
+
+.sidebar ol li{
+	margin-bottom: 35px;
+}
+
+#status{
+	position: relative;
+	float: left;
+	color: #8bc34a;
+}
+
+.gameField{
+	position: relative;
+	float:left;
+	text-align: center;
+	width:820px;
+}
+
+
+#crystalField ul li{
+	display: inline;
+	padding:0 30px;
+
+}
+
+#crystalField img{
+	cursor: pointer;
+
+}
+
+
+.gameVariables{
+	position: relative;
+	background:#4a0f4a;
+	width:777px;
+	margin:auto;
+	border-radius: 25px;
+	padding:15px 0;
+	top:60px;
+
+}
+
+.gameVariables .gVar{
+	padding: 0 20px;
+}
+
+.progressBar{
+	position: relative;
+	background:#4a0f4a;
+	width:777px;
+	margin:20px auto;
+	border-radius: 25px;
+	padding:15px 0;
+	overflow: hidden;
+	top:60px;
+	height:50px;
+}
+
+.progressMarker{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	background: #ffffff;
+}
+
+.progressMarker:after{
+	content: "Target Points";
+	position: absolute;
+	line-height: 50px;
+	width:125px;
+}
+
+.currentBar{
+	position: absolute;
+	top:0;
+	bottom:0;
+	background: #8bc34a;
+	padding: 15px 0;
+}
