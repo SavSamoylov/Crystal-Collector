@@ -2,8 +2,10 @@ $(document).ready(function(){
 
 // Create Game Properties Object.
 var gameProps = {
-	init: {
-		targetPoints:  Math.floor(Math.random() * (120 - 19 + 1) + 19), 
+	init: { 
+		// I decided not to make random number out of 120 so that the target marker 
+		// on the progress bar stays in bounds. It doesn't change the game mechanics at all.
+		targetPoints:  Math.floor(Math.random() * (100 - 19 + 1) + 19), 
 		currentPoints: 0,
 		wins:0,
 		losses:0,
@@ -59,16 +61,16 @@ $(".crystal").on("click", function(){
 
 //FUNCTION: Restarts Game.
 function gameReset(){
-	gameProps.init.targetPoints = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+	gameProps.init.targetPoints = Math.floor(Math.random() * (100 - 19 + 1) + 19);
+	gameProps.crystals.c1.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+	gameProps.crystals.c2.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+	gameProps.crystals.c3.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+	gameProps.crystals.c4.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
 	$("#targetPoints").html("Target Points: " + gameProps.init.targetPoints);
 	gameProps.init.currentPoints = 0;
 	gameProps.render.uiCurrentPoints.html("Current Points: " + gameProps.init.currentPoints);
 	gameProps.render.uiWins.html("Wins: " + gameProps.init.wins);
 	gameProps.render.uiLosses.html("Losses: " + gameProps.init.losses);
-	gameProps.crystals.c1.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
-	gameProps.crystals.c2.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
-	gameProps.crystals.c3.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
-	gameProps.crystals.c4.val = Math.floor(Math.random() * (12 - 1 + 1) + 1);
 	getProgress();
 }
 // FUNCTION: Updates Progress Bar with each click and game restart.
